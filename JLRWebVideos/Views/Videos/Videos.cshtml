@@ -1,0 +1,24 @@
+﻿<form method="post" enctype="multipart/form-data">
+    <h1>
+        Prueba de Videos JLR
+    </h1>
+    <div>
+        <label>Elige Video</label><br />
+        <input type="file" name="video"/>
+        <br/>
+        <button type="submit" >Subir Video</button>
+    </div>
+</form>
+
+<h1>@ViewData["MENSAJE"]</h1>
+           
+@if(ViewData["video"] != null)
+            {
+<iframe width="560"
+        height="315"
+        src="~/uploadFiles/videos/@ViewData["video"]"
+        frameborder="0"
+        allowfullscreen>
+</iframe>
+            }
+
